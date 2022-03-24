@@ -7,11 +7,8 @@
 
 public extension Request {
 
-    /// returns the default file storage
-    var fs: FileStorage { fs(nil) }
-    
     /// returns the file storage for a given identifier
-    func fs(_ id: FileStorageID?) -> FileStorage {
-        application.fileStorages.fileStorage(id, logger: logger, on: eventLoop)!
+    func fs() async -> FileStorage {
+        await application.fileStorages.fileStorage(nil, logger: logger, on: eventLoop)!
     }
 }

@@ -12,11 +12,8 @@ public extension Application {
         liquid.storage.fileStorages
     }
 
-    /// returns the default file storage
-    var fs: FileStorage { fs(nil) }
-    
     /// returns the file storage for a given identifier
-    func fs(_ id: FileStorageID?) -> FileStorage {
-        fileStorages.fileStorage(id, logger: logger, on: eventLoopGroup.next())!
+    func fs() async -> FileStorage {
+        await fileStorages.fileStorage(nil, logger: logger, on: eventLoopGroup.next())!
     }
 }
