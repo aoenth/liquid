@@ -8,7 +8,7 @@
 public extension Request {
 
     /// returns the file storage for a given identifier
-    func fs() async -> FileStorage {
-        await application.fileStorages.fileStorage(nil, logger: logger, on: eventLoop)!
+    func fs() -> FileStorage {
+        application.fileStorages.fileStorage(nil, logger: logger, on: eventLoop)!
     }
 }

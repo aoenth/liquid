@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
@@ -10,8 +10,8 @@ let package = Package(
         .library(name: "Liquid", targets: ["Liquid"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.50.0"),
-        .package(url: "https://github.com/aoenth/liquid-kit.git", from: "1.3.5"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.77.0"),
+        .package(url: "https://github.com/aoenth/liquid-kit.git", from: "1.3.6"),
     ],
     targets: [
         .target(name: "Liquid", dependencies: [
