@@ -13,7 +13,7 @@ public extension Application {
     }
 
     /// returns the file storage for a given identifier
-    func fs() -> FileStorage {
+    var fs: FileStorage {
         fileStorages.fileStorage(nil, logger: logger, on: eventLoopGroup.next())!
     }
 }
